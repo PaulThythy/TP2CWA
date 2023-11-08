@@ -1,0 +1,14 @@
+<h1>Pizza-details.component.html</h1>
+
+<!--Pour exo 1-->
+<ul>
+    <li *ngFor="let pizza of lst">
+        <p><a href="#formsId">Sommet de page</a></p>
+        <img [src]="pizza.img" alt="rien." id="pizza{{lst.indexOf(pizza)}}">
+        <div>{{pizza.nom}} </div>
+        <p>{{pizza.desc}}</p>
+    </li>
+</ul>
+
+<!--Affiche une seule Pizza exo 2-->
+<!--<div id="pizza{{pizzaId}}"></div>-->

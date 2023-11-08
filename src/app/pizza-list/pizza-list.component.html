@@ -1,0 +1,20 @@
+<h1>Pizza-list.component.html</h1>
+
+<form id="formsId" (submit)="ajoutPizza()">
+    <input type="text" name="nom" [(ngModel)]="pizza_lnk.nom">
+    <input type="text" name="img" [(ngModel)]="pizza_lnk.img">
+    <input type="text" name="desc" [(ngModel)]="pizza_lnk.desc">
+    <input type="submit" value="Valider">
+</form>
+
+<ul>
+    <li *ngFor="let pizza of lst_pizza">
+        <a href="#pizza{{lst_pizza.indexOf(pizza)}}">
+            {{pizza.nom}}
+        </a>
+    </li>
+</ul>
+
+<app-pizza-details [lst]="lst_pizza"></app-pizza-details>
+
+
