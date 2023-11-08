@@ -7,7 +7,8 @@ import { Pizza } from '../shared/pizza';
   styleUrls: ['./pizza-details.component.css']
 })
 export class PizzaDetailsComponent {
-  @Input() lst:Pizza[]=[]; //Pour ex 1
+  //lst:Pizza[]=[];         //pour ex 1
+  @Input() lst:Pizza[]=[];  //Pour ex 2
   //@Input() pizza:Pizza=new Pizza("","","");
 
   constructor(){}

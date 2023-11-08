@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+//import { Pizza } from '../pizza'; ex1
 import { Pizza } from '../shared/pizza';
 import { Injectable } from '@angular/core';
 
