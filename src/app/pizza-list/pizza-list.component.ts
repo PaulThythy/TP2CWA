@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 //import { Pizza } from '../pizza'; ex1
 import { Pizza } from '../shared/pizza';
 import { Injectable } from '@angular/core';
@@ -11,12 +11,17 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class PizzaListComponent {
-  pizza_lnk:Pizza=new Pizza("","","");
-  lst_pizza:Pizza[]= [new Pizza("Zaza","/assets/images/01.jpeg","Je sais pas")];
-  
-  ajoutPizza(){
+  @Input() pizzas: Pizza[] = [];
+  @Output() pizzaClicked: EventEmitter<number>= new EventEmitter<number>();
+
+  //ex1
+  /*ajoutPizza(){
     this.pizza_lnk.setImg(this.pizza_lnk.img); // Ajoute le chemin vers l'image /asset/images/<nom>.jpg
     this.lst_pizza.push(this.pizza_lnk);
-    this.pizza_lnk=new Pizza("","","");  
+    this.pizza_lnk=new Pizza("","",""); 
+  }*/
+
+  recupPizza(index: number){
+    this.pizzaClicked.emit(index);
   }
 }

@@ -8,8 +8,8 @@ import { Pizza } from '../shared/pizza';
 })
 export class PizzaDetailsComponent {
   //lst:Pizza[]=[];         //pour ex 1
-  @Input() lst:Pizza[]=[];  //Pour ex 2
-  //@Input() pizza:Pizza=new Pizza("","","");
+  
+  @Input() pizza: Pizza | null = null;
 
   constructor(){}
 }
